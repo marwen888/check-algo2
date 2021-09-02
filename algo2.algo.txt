@@ -1,0 +1,31 @@
+VAR
+vect1,vect2:ARRAY_OF INTEGER;
+i,j:INTEGER;
+sum:0;
+BEGIN
+    FOR i FROM 0 TO length.vect1 DO
+     FOR j FROM 0 TO length.vect2 DO
+       IF(vect1[i] <> vect2[j])
+       THEN
+       sum:=sum+vect1[i];
+       END_IF
+       END_FOR
+    END_FOR  
+   FOR j FROM 0 TO length.vect2 DO
+     FOR i FROM 0 TO length.vect1 DO
+       IF(vect1[j] <> vect2[i])
+       THEN
+       sum:=sum+vect1[j];
+       END_IF
+       END_FOR
+     END_FOR
+    WRITE("sum is" , sum)
+   
+     
+    
+
+END
+
+
+
+
